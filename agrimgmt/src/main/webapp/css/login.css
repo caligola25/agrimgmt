@@ -1,0 +1,74 @@
+body{
+    background-image: url(../media/GRANO_2.jpg);
+}
+
+label{
+    width: 10%;
+    display: inline-block;
+}
+
+input{
+    width: 50%;
+}
+
+#errorDiv{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 5%;
+    color: red;
+    text-decoration: underline;
+    font-weight: 400;
+    font-size: 1vw;
+}
+
+.
+
+#container{
+    margin:auto;
+    position: relative;
+}
+.fa-portrait {
+    color: #6FA054;
+}
+
+.fa-key{
+    color: #6FA054;
+}
+
+
+#inputPsw{
+    margin-top:1%;
+    margin-bottom: 8%;
+}
+
+#titleLog {
+    font-size: 2.1vw;
+    margin: auto;
+    margin-top: 4%;
+    margin-bottom: 5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    text-align: center;
+}
+
+#contentLog{
+    border-color: #6FA054;
+    border-style: solid;
+    border-width: 2px;
+    background-color: white;
+    text-align: center;
+    position:absolute;
+    height: 55%;
+    width: 35%;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:auto;
+    overflow:auto;
+
+}
+
+#input_label{
+    margin-right: 9.3%;
+}

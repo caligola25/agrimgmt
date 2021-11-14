@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>servlet.AbstractDatabaseServlet</OriginalElement>
+  <nodes>
+    <node x="-93.8441593886464" y="388.7676855895195">javax.servlet.http.HttpServlet</node>
+    <node x="1613.7680540393017" y="29.36200873362418">filter.LoginFilter</node>
+    <node x="1610.2680540393014" y="1296.4336244541485">rest.RestResource</node>
+    <node x="1709.2680540393014" y="727.2676855895194">database.administrator.EmployeeDatabase</node>
+    <node x="37.1558406113536" y="29.36200873362418">resource.Resource</node>
+    <node x="491.36835425764195" y="29.36200873362418">filter.AdministratorFilter</node>
+    <node x="30.655840611353597" y="1190.1733624454148">servlet.AbstractDatabaseServlet</node>
+    <node x="1096.0682041484718" y="388.7676855895195">resource.Employee</node>
+    <node x="593.868354257642" y="388.7676855895195">resource.Message</node>
+    <node x="1052.5682041484718" y="29.36200873362418">javax.servlet.Filter</node>
+    <node x="735.4579694323145" y="857.7676855895194">rest.EmployeeRestResource</node>
+    <node x="746.9579694323145" y="1191.4336244541485">servlet.RestManagerServlet</node>
+    <node x="1709.2680540393014" y="388.7676855895195">database.CheckCredential</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="database.administrator.EmployeeDatabase" target="resource.Employee" relationship="TO_ONE">
+      <point x="96.0" y="-229.0" />
+      <point x="1997.2680540393014" y="803.7868995633189" />
+      <point x="1464.7085971615722" y="803.7868995633189" />
+      <point x="1464.7085971615722" y="600.9371179039301" />
+      <point x="1404.3182041484718" y="600.9371179039301" />
+      <point x="102.75" y="138.0" />
+    </edge>
+    <edge source="filter.AdministratorFilter" target="resource.Employee" relationship="TO_ONE">
+      <point x="166.0" y="-99.0" />
+      <point x="906.368354257642" y="180.36200873362418" />
+      <point x="1258.1192139737993" y="180.36200873362418" />
+      <point x="1258.1192139737993" y="617.7676855895195" />
+      <point x="1404.3182041484718" y="617.7676855895195" />
+      <point x="102.75" y="138.0" />
+    </edge>
+    <edge source="rest.EmployeeRestResource" target="resource.Message" relationship="CREATE">
+      <point x="-244.875" y="-98.5" />
+      <point x="817.0829694323145" y="947.5991266375545" />
+      <point x="792.5165665938864" y="947.5991266375545" />
+      <point x="792.5165665938864" y="989.6034934497816" />
+      <point x="817.0829694323145" y="989.6034934497816" />
+      <point x="817.0829694323145" y="604.0340611353712" />
+      <point x="740.368354257642" y="604.0340611353712" />
+      <point x="0.0" y="125.5" />
+    </edge>
+    <edge source="resource.Message" target="resource.Resource" relationship="GENERALIZATION">
+      <point x="0.0" y="-125.5" />
+      <point x="740.368354257642" y="342.0165938864629" />
+      <point x="88.89295851528371" y="342.0165938864629" />
+      <point x="88.89295851528371" y="141.0410480349345" />
+      <point x="177.1558406113536" y="141.0410480349345" />
+      <point x="0.0" y="60.0" />
+    </edge>
+    <edge source="filter.LoginFilter" target="resource.Employee" relationship="TO_ONE">
+      <point x="71.875" y="-151.0" />
+      <point x="1973.1430540393017" y="233.7537117903928" />
+      <point x="2185.6537117903936" y="233.7537117903928" />
+      <point x="2185.6537117903936" y="180.36200873362418" />
+      <point x="1336.8240174672492" y="180.36200873362418" />
+      <point x="1336.8240174672492" y="421.31441048034935" />
+      <point x="1404.3182041484718" y="421.31441048034935" />
+      <point x="102.75" y="138.0" />
+    </edge>
+    <edge source="filter.LoginFilter" target="javax.servlet.Filter" relationship="REALIZATION">
+      <point x="215.625" y="-151.0" />
+      <point x="2116.8930540393017" y="215.17205240174667" />
+      <point x="1984.1891784934505" y="215.17205240174667" />
+      <point x="1984.1891784934505" y="88.36200873362418" />
+      <point x="1301.5682041484718" y="88.36200873362418" />
+      <point x="0.0" y="59.0" />
+    </edge>
+    <edge source="servlet.AbstractDatabaseServlet" target="javax.servlet.http.HttpServlet" relationship="GENERALIZATION">
+      <point x="0.0" y="-112.5" />
+      <point x="0.0" y="333.0" />
+    </edge>
+    <edge source="resource.Employee" target="resource.Resource" relationship="GENERALIZATION">
+      <point x="0.0" y="-138.0" />
+      <point x="1301.5682041484718" y="421.31441048034935" />
+      <point x="1152.9149290393013" y="421.31441048034935" />
+      <point x="1152.9149290393013" y="282.69170305676874" />
+      <point x="270.06413755458505" y="282.69170305676874" />
+      <point x="270.06413755458505" y="149.36200873362418" />
+      <point x="0.0" y="60.0" />
+    </edge>
+    <edge source="rest.EmployeeRestResource" target="resource.Employee" relationship="DEPENDENCY">
+      <point x="81.625" y="-98.5" />
+      <point x="1143.5829694323145" y="896.6951965065502" />
+      <point x="1222.5961517467251" y="896.6951965065502" />
+      <point x="1222.5961517467251" y="432.93362445414846" />
+      <point x="1198.8182041484718" y="432.93362445414846" />
+      <point x="-102.75" y="138.0" />
+    </edge>
+    <edge source="filter.AdministratorFilter" target="javax.servlet.Filter" relationship="REALIZATION">
+      <point x="-166.0" y="-99.0" />
+      <point x="574.368354257642" y="88.36200873362418" />
+      <point x="1301.5682041484718" y="88.36200873362418" />
+      <point x="0.0" y="59.0" />
+    </edge>
+    <edge source="database.administrator.EmployeeDatabase" target="resource.Employee" relationship="CREATE">
+      <point x="-96.0" y="-229.0" />
+      <point x="1805.2680540393014" y="858.8213973799125" />
+      <point x="1404.3182041484718" y="858.8213973799125" />
+      <point x="1404.3182041484718" y="560.6768558951966" />
+      <point x="1198.8182041484718" y="560.6768558951966" />
+      <point x="-102.75" y="138.0" />
+    </edge>
+    <edge source="servlet.RestManagerServlet" target="rest.EmployeeRestResource" relationship="CREATE">
+      <point x="0.0" y="-125.0" />
+      <point x="1061.9579694323145" y="1337.2139737991265" />
+      <point x="1075.8942139737992" y="1337.2139737991265" />
+      <point x="1075.8942139737992" y="1287.350655021834" />
+      <point x="1061.9579694323145" y="1287.350655021834" />
+      <point x="0.0" y="98.5" />
+    </edge>
+    <edge source="filter.AdministratorFilter" target="resource.Employee" relationship="DEPENDENCY">
+      <point x="0.0" y="-99.0" />
+      <point x="740.368354257642" y="215.17205240174667" />
+      <point x="1217.9507368995635" y="215.17205240174667" />
+      <point x="1217.9507368995635" y="539.7676855895195" />
+      <point x="1324.398243219949" y="539.7676855895195" />
+      <point x="1324.398243219949" y="487.0" />
+      <point x="1336.8240174672492" y="487.0" />
+      <point x="1336.8240174672492" y="432.93362445414846" />
+      <point x="1198.8182041484718" y="432.93362445414846" />
+      <point x="-102.75" y="138.0" />
+    </edge>
+    <edge source="rest.EmployeeRestResource" target="rest.RestResource" relationship="GENERALIZATION">
+      <point x="-81.625" y="-98.5" />
+      <point x="980.3329694323145" y="989.6034934497816" />
+      <point x="1306.8329694323145" y="989.6034934497816" />
+      <point x="1306.8329694323145" y="1014.7076419213972" />
+      <point x="1648.8671806768562" y="1014.7076419213972" />
+      <point x="1648.8671806768562" y="1313.2340611353713" />
+      <point x="1901.2680540393014" y="1313.2340611353713" />
+      <point x="0.0" y="72.5" />
+    </edge>
+    <edge source="servlet.RestManagerServlet" target="servlet.AbstractDatabaseServlet" relationship="GENERALIZATION">
+      <point x="210.0" y="-125.0" />
+      <point x="1271.9579694323145" y="1302.6733624454148" />
+      <point x="177.1558406113536" y="1302.6733624454148" />
+      <point x="0.0" y="112.5" />
+    </edge>
+    <edge source="servlet.RestManagerServlet" target="resource.Message" relationship="CREATE">
+      <point x="-210.0" y="-125.0" />
+      <point x="851.9579694323145" y="1245.8541484716156" />
+      <point x="521.0120974344977" y="1245.8541484716156" />
+      <point x="521.0120974344977" y="514.2676855895195" />
+      <point x="740.368354257642" y="514.2676855895195" />
+      <point x="0.0" y="125.5" />
+    </edge>
+    <edge source="rest.EmployeeRestResource" target="database.administrator.EmployeeDatabase" relationship="CREATE">
+      <point x="244.875" y="-98.5" />
+      <point x="1306.8329694323145" y="921.2751091703058" />
+      <point x="1901.2680540393014" y="921.2751091703058" />
+      <point x="0.0" y="229.0" />
+    </edge>
+    <edge source="filter.LoginFilter" target="database.CheckCredential" relationship="CREATE">
+      <point x="-71.875" y="-151.0" />
+      <point x="1829.3930540393017" y="233.7537117903928" />
+      <point x="1910.2680540393014" y="233.7537117903928" />
+      <point x="0.0" y="99.0" />
+    </edge>
+    <edge source="filter.LoginFilter" target="resource.Employee" relationship="DEPENDENCY">
+      <point x="-215.625" y="-151.0" />
+      <point x="1685.6430540393017" y="215.17205240174667" />
+      <point x="1375.3439683406116" y="215.17205240174667" />
+      <point x="1375.3439683406116" y="519.0069868995632" />
+      <point x="1198.8182041484718" y="519.0069868995632" />
+      <point x="-102.75" y="138.0" />
+    </edge>
+    <edge source="database.CheckCredential" target="resource.Employee" relationship="CREATE">
+      <point x="0.0" y="-99.0" />
+      <point x="1910.2680540393014" y="402.8183406113536" />
+      <point x="2069.355117358079" y="402.8183406113536" />
+      <point x="2069.355117358079" y="473.0637554585153" />
+      <point x="1795.171615720524" y="473.0637554585153" />
+      <point x="1795.171615720524" y="487.7676855895195" />
+      <point x="1443.4767194323147" y="487.7676855895195" />
+      <point x="1443.4767194323147" y="446.0899563318778" />
+      <point x="1198.8182041484718" y="446.0899563318778" />
+      <point x="-102.75" y="138.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.7990230286113049" showDependencies="true" x="1049.5" y="735.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

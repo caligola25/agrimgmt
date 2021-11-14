@@ -1,0 +1,8 @@
+.not-mandatory-pr,
+.not-mandatory-ma{
+    visibility: hidden;
+}
+
+input[type="checkbox"] {
+    width:auto;
+}

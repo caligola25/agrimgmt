@@ -1,0 +1,23 @@
+.images {
+    width: 25em;
+}
+
+.group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+    padding: 0.5em;
+    align-items: center;
+}
+
+.paragraph{
+    width: 100%
+}
+
+.paragraph>h2 {
+    border-bottom: #6fa054 solid;
+    margin-right: 2.5%;
+    border-bottom-width: 2px;
+}

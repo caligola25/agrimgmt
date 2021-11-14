@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('http://localhost:8080/agrimgmt-1.0/fonts/AvenirNext-Regular.woff2') format('woff2'),
+        url('http://localhost:8080/agrimgmt-1.0/fonts/AvenirNext-Regular.woff') format('woff'),
+        url('http://localhost:8080/agrimgmt-1.0/fonts/AvenirNext-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('http://localhost:8080/agrimgmt-1.0/fonts/AvenirNext-Bold.woff2') format('woff2'),
+        url('http://localhost:8080/agrimgmt-1.0/fonts/AvenirNext-Bold.woff') format('woff'),
+        url('http://localhost:8080/agrimgmt-1.0/fonts/AvenirNext-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('http://localhost:8080/agrimgmt-1.0/fonts/AvenirNext-It.woff2') format('woff2'),
+        url('http://localhost:8080/agrimgmt-1.0/fonts/AvenirNext-It.woff') format('woff'),
+        url('http://localhost:8080/agrimgmt-1.0/fonts/AvenirNext-It.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('http://localhost:8080/agrimgmt-1.0/fonts/AvenirNext-DemiBold.woff2') format('woff2'),
+    url('http://localhost:8080/agrimgmt-1.0/fonts/AvenirNext-DemiBold.woff') format('woff'),
+    url('http://localhost:8080/agrimgmt-1.0/fonts/AvenirNext-DemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>database.CheckCredential</OriginalElement>
+  <nodes>
+    <node x="239.53086575594864" y="968.2904205322264">filter.ProdPlannerFilter</node>
+    <node x="-777.6734771728516" y="450.6246337890625">resource.RawMaterial</node>
+    <node x="-1495.0256486372518" y="450.6246337890625">javax.servlet.http.HttpServlet</node>
+    <node x="-842.1734771728517" y="859.6707935333252">database.warehouse_worker.ListSupplierDatabase</node>
+    <node x="-824.1734771728517" y="641.6477136611938">database.prod_planner.ListRawMaterialDatabase</node>
+    <node x="201.03086575594853" y="1259.3082580566406">filter.LoginFilter</node>
+    <node x="-346.8213057084515" y="450.6246337890625">database.prod_planner.AddMaterialOrderDatabase</node>
+    <node x="239.53086575594864" y="450.6246337890625">filter.AdministratorFilter</node>
+    <node x="-1370.5256486372518" y="1312.8886260986328">servlet.AbstractDatabaseServlet</node>
+    <node x="-794.1734771728517" y="1330.7487487792969">resource.Message</node>
+    <node x="-306.3213057084515" y="789.9664459228516">resource.MaterialOrder</node>
+    <node x="239.53086575594864" y="744.6292114257812">javax.servlet.Filter</node>
+    <node x="-883.1734771728517" y="1181.6938734054565">servlet.prod_planner.AddMaterialOrderServlet</node>
+    <node x="-306.5713057084515" y="1330.7487487792969">database.CheckCredential</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="filter.ProdPlannerFilter" target="javax.servlet.Filter" relationship="REALIZATION">
+      <point x="0.0" y="-99.0" />
+      <point x="0.0" y="59.0" />
+    </edge>
+    <edge source="servlet.prod_planner.AddMaterialOrderServlet" target="resource.RawMaterial" relationship="DEPENDENCY">
+      <point x="-67.28571428571422" y="-46.5" />
+      <point x="-714.9591914585659" y="1228.1938734054565" />
+      <point x="-912.7119744040751" y="1228.1938734054565" />
+      <point x="-912.7119744040751" y="510.12463378906244" />
+      <point x="-647.6734771728516" y="510.12463378906244" />
+      <point x="0.0" y="59.5" />
+    </edge>
+    <edge source="database.prod_planner.ListRawMaterialDatabase" target="resource.RawMaterial" relationship="CREATE">
+      <point x="0.0" y="-73.0" />
+      <point x="-647.6734771728517" y="696.0" />
+      <point x="-647.6734771728516" y="696.0" />
+      <point x="0.0" y="59.5" />
+    </edge>
+    <edge source="database.prod_planner.AddMaterialOrderDatabase" target="resource.MaterialOrder" relationship="TO_ONE">
+      <point x="-120.0" y="-86.0" />
+      <point x="-226.82130570845152" y="579.2222747802734" />
+      <point x="-206.57130570845152" y="579.2222747802734" />
+      <point x="-99.75" y="151.0" />
+    </edge>
+    <edge source="servlet.prod_planner.AddMaterialOrderServlet" target="servlet.AbstractDatabaseServlet" relationship="GENERALIZATION">
+      <point x="134.57142857142867" y="-46.5" />
+      <point x="-513.102048601423" y="1243.0386962890625" />
+      <point x="-840.0796792166574" y="1243.0386962890625" />
+      <point x="-840.0796792166574" y="1425.3886260986328" />
+      <point x="-1153.6992659135296" y="1425.3886260986328" />
+      <point x="-1153.6992659135296" y="1360.6978759765625" />
+      <point x="-1224.0256486372518" y="1360.6978759765625" />
+      <point x="0.0" y="112.5" />
+    </edge>
+    <edge source="servlet.AbstractDatabaseServlet" target="javax.servlet.http.HttpServlet" relationship="GENERALIZATION">
+      <point x="0.0" y="-112.5" />
+      <point x="0.0" y="333.0" />
+    </edge>
+    <edge source="filter.LoginFilter" target="javax.servlet.Filter" relationship="REALIZATION">
+      <point x="-143.75" y="-151.0" />
+      <point x="344.7808657559485" y="1345.737045288086" />
+      <point x="149.74172488125902" y="1345.737045288086" />
+      <point x="149.74172488125902" y="803.6292114257812" />
+      <point x="488.53086575594864" y="803.6292114257812" />
+      <point x="0.0" y="59.0" />
+    </edge>
+    <edge source="servlet.prod_planner.AddMaterialOrderServlet" target="resource.MaterialOrder" relationship="CREATE">
+      <point x="67.28571428571422" y="-46.5" />
+      <point x="-580.3877628871375" y="1243.0386962890625" />
+      <point x="-106.82130570845152" y="1243.0386962890625" />
+      <point x="-106.82130570845152" y="958.6505889892579" />
+      <point x="-7.0713057084515185" y="958.6505889892579" />
+      <point x="99.75" y="151.0" />
+    </edge>
+    <edge source="database.prod_planner.AddMaterialOrderDatabase" target="resource.MaterialOrder" relationship="DEPENDENCY">
+      <point x="120.0" y="-86.0" />
+      <point x="13.178694291548481" y="507.773666381836" />
+      <point x="-7.0713057084515185" y="507.773666381836" />
+      <point x="99.75" y="151.0" />
+    </edge>
+    <edge source="filter.AdministratorFilter" target="javax.servlet.Filter" relationship="REALIZATION">
+      <point x="0.0" y="-99.0" />
+      <point x="0.0" y="59.0" />
+    </edge>
+    <edge source="servlet.prod_planner.AddMaterialOrderServlet" target="database.warehouse_worker.ListSupplierDatabase" relationship="CREATE">
+      <point x="-201.8571428571429" y="-46.5" />
+      <point x="-849.5306200299946" y="1234.3479743003845" />
+      <point x="-873.5926964499736" y="1234.3479743003845" />
+      <point x="-873.5926964499736" y="1020.3647003173828" />
+      <point x="-647.6734771728517" y="1020.3647003173828" />
+      <point x="0.0" y="125.0" />
+    </edge>
+    <edge source="servlet.prod_planner.AddMaterialOrderServlet" target="database.prod_planner.ListRawMaterialDatabase" relationship="CREATE">
+      <point x="-134.57142857142856" y="-46.5" />
+      <point x="-427.47503662109375" y="1181.6938734054565" />
+      <point x="-427.47503662109375" y="705.8626708984374" />
+      <point x="-486.8163343157088" y="705.8626708984374" />
+      <point x="-486.8163343157088" y="718.1246337890625" />
+      <point x="-647.6734771728517" y="718.1246337890625" />
+      <point x="0.0" y="73.0" />
+    </edge>
+    <edge source="servlet.prod_planner.AddMaterialOrderServlet" target="resource.Message" relationship="CREATE">
+      <point x="201.8571428571429" y="-46.5" />
+      <point x="-445.8163343157088" y="1243.0386962890625" />
+      <point x="-647.6734771728517" y="1243.0386962890625" />
+      <point x="0.0" y="125.5" />
+    </edge>
+    <edge source="servlet.prod_planner.AddMaterialOrderServlet" target="database.prod_planner.AddMaterialOrderDatabase" relationship="CREATE">
+      <point x="0.0" y="-46.5" />
+      <point x="-647.6734771728517" y="1207.3184509277344" />
+      <point x="-388.0147705078127" y="1207.3184509277344" />
+      <point x="-388.0147705078127" y="510.1246337890625" />
+      <point x="-106.82130570845152" y="510.1246337890625" />
+      <point x="0.0" y="86.0" />
+    </edge>
+    <edge source="filter.LoginFilter" target="database.CheckCredential" relationship="CREATE">
+      <point x="143.75" y="-151.0" />
+      <point x="632.2808657559485" y="1459.9735717773438" />
+      <point x="-105.57130570845152" y="1459.9735717773438" />
+      <point x="0.0" y="99.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="true" x="-359.5" y="1016.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

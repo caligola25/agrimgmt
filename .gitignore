@@ -1,0 +1,26 @@
+# IntelliJ Idea
+*.iml
+agrimgmt/.idea/
+.idea/
+
+# Eclipse like
+agrimgmt/.settings/
+agrimgmt/.project
+agrimgmt/.classpath
+
+# Java
+*.class
+agrimgmt/target/
+javadoc/
+log/
+
+# Package Files
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+### OSX ###
+.DS_Store

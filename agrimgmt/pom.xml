@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>it.unipd.dei.webapp</groupId>
+  <artifactId>agrimgmt</artifactId>
+  <version>1.0</version>
+  <packaging>war</packaging>
+
+  <name>AgriManagement</name>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>8</maven.compiler.source>
+    <maven.compiler.target>8</maven.compiler.target>
+  </properties>
+
+  <build>
+      
+    <defaultGoal>compile</defaultGoal>
+    
+    <!-- source code folder -->
+    <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
+    
+    <!-- compiled code folder -->
+    <directory>${basedir}/target</directory>
+    
+    <!-- name of the generated package -->
+    <finalName>${project.artifactId}-${project.version}</finalName>
+
+    <!-- configuration of the plugins for the different goals -->
+    <plugins>
+
+      <!-- compiler plugin: source and target code is for Java 1.8 -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+
+      <!-- javadoc plugin: output in the javadoc folder -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.2.0</version>
+        <configuration>
+          <reportOutputDirectory>${basedir}/javadoc</reportOutputDirectory>
+          <author>true</author>
+          <nosince>false</nosince>
+          <show>protected</show>
+          <source>8</source>
+        </configuration>
+      </plugin>
+
+      <!-- packager plugin: create a WAR file to be deployed -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.3.1</version>
+        <configuration>
+          <webXml>${basedir}/src/main/webapp/WEB-INF/web.xml</webXml>
+        </configuration>
+      </plugin>
+
+    </plugins>
+
+    <resources>
+
+      <!-- copy html files to th target directory -->
+      <resource>
+        <targetPath>${basedir}/target/${project.artifactId}-${project.version}/html</targetPath>
+        <directory>${basedir}/src/main/webapp/html</directory>
+        <includes>
+          <include>**/*.*</include>
+        </includes>
+      </resource>
+
+      <!-- copy configuration files to the target directory -->
+      <resource>
+        <targetPath>${basedir}/target/${project.artifactId}-${project.version}/META-INF</targetPath>
+        <directory>${basedir}/src/main/webapp/META-INF</directory>
+        <includes>
+          <include>**/*.*</include>
+        </includes>
+      </resource>
+
+    </resources>
+
+  </build>
+
+  <!-- Dependencies -->
+  <dependencies>
+    <!-- javax servlets dependencies -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>4.0.1</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/javax.activation/activation -->
+    <dependency>
+      <groupId>javax.activation</groupId>
+      <artifactId>activation</artifactId>
+      <version>1.1.1</version>
+    </dependency>
+
+
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>42.2.19</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-jdbc</artifactId>
+      <version>9.0.7</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- Log4J2 -->
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
+      <version>2.14.1</version>
+    </dependency>
+
+    <!-- Commons-io -->
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.8.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>commons-fileupload</groupId>
+      <artifactId>commons-fileupload</artifactId>
+      <version>1.4</version>
+    </dependency>
+
+    <!-- JSP dependency -->
+    <dependency>
+      <groupId>org.apache.taglibs</groupId>
+      <artifactId>taglibs-standard-spec</artifactId>
+      <version>1.2.5</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.taglibs</groupId>
+      <artifactId>taglibs-standard-impl</artifactId>
+      <version>1.2.5</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.taglibs</groupId>
+      <artifactId>taglibs-standard-jstlel</artifactId>
+      <version>1.2.5</version>
+    </dependency>
+
+    <!-- Jackson for json and it.unipd.dei.webapp.rest -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>2.12.0</version>
+    </dependency>
+
+  </dependencies>
+  
+</project>

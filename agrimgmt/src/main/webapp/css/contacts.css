@@ -1,0 +1,40 @@
+.column {
+    width: 23%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    margin-left: 5vw;
+}
+
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.content {
+    padding: 0 16px;
+    overflow: hidden;
+}
+
+.content::after, .row::after {
+    content: "";
+    display: table;
+}
+
+.title {
+    color: gray;
+}
+
+.button {
+    color: white;
+    width: 95%;
+}
+
+img{
+    width: 100%;
+}

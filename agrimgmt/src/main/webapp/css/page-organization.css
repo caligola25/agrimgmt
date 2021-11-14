@@ -1,0 +1,285 @@
+@import url("http://localhost:8080/agrimgmt-1.0/css/font.css");
+
+*:not(i) {
+    box-sizing: border-box;
+    font-family: 'Avenir Next';
+}
+
+body {
+    /*background: no-repeat fixed url("../media/GRANO_2.jpg");
+    background-size: cover;*/
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+}
+
+h1 {
+    font-weight: 600;
+    font-variant: small-caps;
+    width: 45%;
+    margin-top: 0%;
+    margin-bottom: 2.5%;
+    margin-left: 2.5%;
+    margin-right: 0%;
+    border-bottom: solid;
+    border-bottom-color: #6fa054;
+    border-bottom-width: 2px;
+}
+
+
+h2 {
+    font-weight: 600;
+    font-variant: all-small-caps;
+    margin-top: 0%;
+    margin-left: 2.5%;
+    margin-right: 0%;
+    margin-bottom: 1.25%;
+}
+
+form h2 {
+    margin-left: 0;
+}
+
+h3 {
+    font-variant: all-small-caps;
+    margin-top: 0%;
+    margin-bottom: 0.5%;
+    margin-left: 2.5%;
+    margin-right: 0%;
+}
+
+p, table, form, a {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+a+a {
+    margin-right: 0;
+}
+
+table{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+ul, ol {
+    margin-left: 3.5%;
+}
+
+button {
+    width: auto;
+    margin-left: 2.5%;
+    cursor: pointer;
+}
+
+a button, form button {
+    margin-left: 0;
+}
+
+.clear {
+    clear: left;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footnotes{
+    font-size: small;
+    margin-left: unset;
+}
+
+.li-title {
+    font-weight: bold;
+    font-variant: all-small-caps;
+}
+
+.left-half-col {
+    float: left;
+    width: 45%;
+    margin-left: 2.5%;
+    margin-right: 1.25%;
+}
+
+.left-half-col a, .left-half-col p, .left-half-col form, .left-half-col h1, .left-half-col h2, .left-half-col h3{
+    margin-left: 0;
+}
+
+.left-half-col ul, .left-half-col ol {
+    margin-left: 2.5%;
+}
+
+.right-half-col {
+    float: left;
+    width: 45%;
+    margin-left: 1.25%;
+    margin-right: 2.5%;
+}
+
+.right-half-col a, .right-half-col p, .right-half-col form, .right-half-col h1, .right-half-col h2, .right-half-col h3{
+    margin-left: 0;
+}
+
+.right-half-col ul, .right-half-col ol {
+    margin-left: 2.5%;
+}
+
+.first-three-col {
+    float: left;
+    width: 30%;
+    margin-left: 2.5%;
+    margin-right: 1.25%;
+}
+
+.first-three-col a, .first-three-col p, .first-three-col form, .first-three-col ul, .first-three-col h1, .first-three-col h2, .first-three-col h3{
+    margin-left: 0;
+}
+
+.second-three-col {
+    float: left;
+    width: 30%;
+    margin-left: 1.25%;
+    margin-right: 1.25%;
+}
+
+.second-three-col a, .second-three-col p, .second-three-col form, .second-three-col ul, .second-three-col h1, .second-three-col h2, .second-three-col h3{
+    margin-left: 0;
+}
+
+.third-three-col {
+    float: left;
+    width: 30%;
+    margin-left: 1.25%;
+    margin-right: 2.5%;
+}
+
+.third-three-col a, .third-three-col p, .third-three-col form, .third-three-col ul, .third-three-col h1, .third-three-col h2, .third-three-col h3{
+    margin-left: 0;
+}
+
+hr.split {
+    color: #6FA054;
+    margin-top: 1.25%;
+    margin-bottom: 1.25%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+#container{
+    min-height: 87.8vh;
+}
+
+.message-list {
+    padding: 2.2%;
+}
+
+.results {
+    padding-top: 1%;
+    padding-bottom: 2.5%
+}
+
+.bottom-col-p {
+    margin-bottom: 3.5%;
+    text-align: center;
+}
+
+.bottom-col-p.left-text {
+    text-align: left;
+}
+
+.left-text {
+    text-align: left;
+}
+
+.button-menu li {
+    width: 30%;
+}
+
+/* button menus for production planner */
+.button-menu button {
+    color: #cfddd9;
+    background-color: #272727;
+    border-radius: 0;
+    border: 0.2pt rgba(207, 221, 217, 0.1) solid;
+    box-shadow: none;
+    width: 100%;
+    margin: 0;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    height: 13em;
+}
+
+.button-menu button:hover {
+    background-color: #6fa054;
+    transition: all 0.3s ease 0s;
+    box-shadow: none;
+}
+
+#pos-earning {
+    text-decoration: underline;
+    color: #6fa054;
+}
+
+#neg-earning {
+    text-decoration: underline;
+    color: #81171B;
+}
+
+#inline-download {
+    display: inline;
+}
+
+#back-to-block {
+    display: block;
+}
+
+.errorTag {
+    display: inline;
+}
+
+#top-btn {
+    all:initial;/*resets all properties*/
+    display : none;
+    padding: 0;
+    background: transparent;
+    color: #6fa054;
+    border: none;
+    font: inherit;
+    font-size: 2em;
+    cursor: pointer;
+    outline: inherit;
+    position: fixed;
+    left: 0.3%;
+    bottom: 10vh;
+}
+
+#top-btn:hover {
+    background-color: transparent;
+    color: #272727;
+    box-shadow: none;
+}
+
+/* Intra-button styling for prod planner buttons */
+button>p {
+    padding-bottom: 1em;
+}
+
+.button-menu {
+    width: 30%;
+    margin-right: 1.5%;
+    margin-left: 1.5%;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 2.5%;
+    align-content: center;
+    margin-top: 2.5%;
+}
+

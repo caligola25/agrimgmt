@@ -1,0 +1,110 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.main-container{
+    position: relative;
+    float: left;
+    width:100%;
+}
+.open-sidebar {
+    display: inline-block;
+    margin: 4px;
+    padding: 7px 20px;
+    color: gainsboro;
+    background: #272727;
+    float:right;
+    border-radius: 50px;
+    box-shadow: 0px 8px 15px rgba(44, 63, 33, 0.3);
+    width: auto !important;
+}
+.open-sidebar:hover {
+    background: #6FA054;
+    cursor: pointer;
+}
+.sidebar-content {
+    background-color: gainsboro;
+    /*padding: 40px 0;*/
+    overflow: hidden;
+    transition: all 0.5s;
+    position: fixed;
+    width: 20%;
+    top: 0;
+    right: -20%;
+    bottom: 0;
+    z-index: 1000;
+}
+.close-sidebar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all 0.3s;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: auto !important;
+    margin-top: 2%;
+    margin-right: 2%;
+}
+
+.menu-activation {
+    display: none;
+}
+.menu-activation:checked + .sidebar-content {
+    right: 0;
+}
+.menu-list {
+    position: absolute;
+    /*top: 120px;*/
+    top:0px;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: inherit;
+    display: block;
+    overflow: hidden;
+    margin-top:30%;
+    overflow-y: auto;
+}
+.menu-list ul {
+    list-style-type: none;
+}
+.menu-list h2{
+    margin-left:5%;
+    display:block;
+    color:#272727;
+    font-size: 1.5vw;
+}
+.menu-list li {
+    display: block;
+}
+.menu-list li:first-child {
+    border-top: medium none;
+}
+.menu-list li a {
+    display: block;
+    padding: 5% 3%;
+    font-size: 1vw;
+    color: #272727;
+    text-decoration: none;
+}
+.menu-list li a:hover {
+    background: #6FA054;
+}
+.menu-list li a:active {
+    background: #666;
+}
+.close-sidebar i:hover{
+    color:rgba(236, 69, 69, 1);
+    cursor: pointer;
+}
+
+.close-sidebar i{
+    font-size:2vw;
+}
+
+.sidebar-content h1 {
+    width: 85%;
+    font-size: 2vw;
+    margin-top: 10%;
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<Configuration status="INFO">
+    <Appenders>
+        <RollingFile name="completeLog" filename="/Users/matteo/Documents/Universita?/WebAPP/agrimgmt-wa2021/logs/webAppLogs.log"
+                     filepath="/Users/matteo/Documents/Universita?/WebAPP/agrimgmt-wa2021/logs/webAppLogs-%d{dd-MM-yyyy}.log">
+            <PatternLayout pattern="%d{dd-MM-yyyy HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <TimeBasedTriggeringPolicy/>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <Root level="all">
+            <AppenderRef ref="completeLog"/>
+        </Root>
+    </Loggers>
+</Configuration>

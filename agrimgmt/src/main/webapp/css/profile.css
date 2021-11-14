@@ -1,0 +1,32 @@
+.column {
+    width: 27%;
+    padding: 0 8px;
+    margin-left: 5vw;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    align-content: center;
+}
+
+.content {
+    padding: 0 16px;
+    overflow: hidden;
+}
+
+.content::after, .row::after {
+    content: "";
+    display: table;
+}
+
+.title {
+    color: gray;
+}
+
+img{
+    width: 100%;
+}
+
+p{
+    margin-bottom: 16px;
+}

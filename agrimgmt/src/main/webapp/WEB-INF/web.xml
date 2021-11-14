@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="agrimgmt-webapp" version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://xmlns.jpc.org/xml/ns/javaee/web-app_4_0.xsd">
+
+    <display-name>AgriManagement-HTML</display-name>
+    <description>WebApp for the management of an Agricultural Equipment Company</description>
+
+    <welcome-file-list>
+        <welcome-file>/jsp/homepage.jsp</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>ShowCatalogue</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.warehouse_worker.CatalogueServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>Supplying</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.warehouse_worker.SupplyingServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>AddProductOrder</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.prod_planner.AddProductOrderServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>UpdateItemStatus</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.warehouse_worker.UpdateStatusItemServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet>
+        <servlet-name>AddProcess</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.designer.AddProcessServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ViewOperationsWorker</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.lineprod_worker.ViewOperationsWorkerServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>FinancialOverview</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.accountant.FinancialOverviewServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>AddCustomerNProd</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.prod_planner.AddCustomerNProdServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>AddCustomer</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.prod_planner.AddCustomerServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>AddFixedCost</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.accountant.AddFixedCostServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>UpdateFixedCost</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.accountant.UpdateFixedCostServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ProductOrderList</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.prod_planner.ProductOrderListServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>SearchProdOrder</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.prod_planner.SearchProdOrderServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>DeleteFixedCost</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.accountant.DeleteFixedCostServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>FixedCostManagement</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.accountant.FixedCostManagementServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>CustomerList</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.prod_planner.CustomerListServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>SearchProcess</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.designer.SearchProcessServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>UpdateCustomer</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.prod_planner.UpdateCustomerServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>MaterialOrdersList</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.prod_planner.MaterialOrderListServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>TimeDifferenceServlet</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.accountant.TimeDifferenceServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ReportManagementServlet</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.accountant.ReportManagementServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>DownloadReportServlet</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.accountant.DownloadReportServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>SearchMaterialOrder</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.prod_planner.SearchMaterialOrderServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>WarehouseList</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.prod_planner.WarehouseListServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>SearchStoredMaterial</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.prod_planner.SearchStoredMaterialServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>AddMaterialOrder</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.prod_planner.AddMaterialOrderServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>SearchStoredItem</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.prod_planner.SearchStoredItemServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ChangeProductStatus</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.designer.ChangeProductStatusServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>SearchCustomer</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.prod_planner.SearchCustomerServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>AddSupplyingMaterialOrder</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.prod_planner.AddSupplyingServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ShowItemStored</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.warehouse_worker.ShowItemStoredServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>DeleteMaterialOrder</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.prod_planner.DeleteMaterialOrderServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>AddSupplier</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.prod_planner.AddSupplierServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ChangeProcessEstimatedTime</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.designer.ChangeProcessEstimatedTimeServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>InsertPhaseTimeServlet</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.lineprod_worker.InsertPhaseTimeServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ShowInfo</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.prod_planner.ItemNProdPhaseListServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ControlProdOrder</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.prod_planner.ControlProdOrderServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ControlItem</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.prod_planner.ControlItemServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ControlProdPhase</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.prod_planner.ControlProdPhaseServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ControlEmployee</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.prod_planner.ControlEmployeeServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>EmployeeList</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.prod_planner.EmployeeListServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>RestManager</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.RestManagerServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>SupplierList</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.prod_planner.SupplierListServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>DeleteCustomer</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.prod_planner.DeleteCustomerServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>UpdateSupplier</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.prod_planner.UpdateSupplierServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>DeleteSupplier</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.prod_planner.DeleteSupplierServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>DeleteProdOrder</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.prod_planner.DeleteProductOrderServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>EmployeeManagement</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.administrator.EmployeeManagementServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>AddEmployee</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.administrator.AddEmployeeServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>UpdateEmployee</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.administrator.UpdateEmployeeServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>DeleteEmployee</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.administrator.DeleteEmployeeServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ProductList</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.designer.ProductListServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ProcessList</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.designer.ProcessListServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>RawMaterialList</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.designer.RawMaterialListServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>it.unipd.dei.webapp.servlet.LogoutServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>InsertPhaseTimeServlet</servlet-name>
+        <url-pattern>/protected/lineprod_worker/insert-time</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ShowItemStored</servlet-name>
+        <url-pattern>/protected/warehouse_worker/show-item-stored</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>UpdateItemStatus</servlet-name>
+        <url-pattern>/protected/warehouse_worker/update-item-status</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ShowCatalogue</servlet-name>
+        <url-pattern>/show-catalogue</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AddProductOrder</servlet-name>
+        <url-pattern>/protected/prod_planner/add-product-order</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Supplying</servlet-name>
+        <url-pattern>/protected/warehouse_worker/supplying</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>*.xhtml</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AddProcess</servlet-name>
+        <url-pattern>/protected/designer/add-process</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>FinancialOverview</servlet-name>
+        <url-pattern>/protected/accountant/financial-overview</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AddCustomerNProd</servlet-name>
+        <url-pattern>/protected/prod_planner/po-add-customer-nprod</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AddCustomer</servlet-name>
+        <url-pattern>/protected/prod_planner/add-customer</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AddFixedCost</servlet-name>
+        <url-pattern>/protected/accountant/add-fixed-cost</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>UpdateFixedCost</servlet-name>
+        <url-pattern>/protected/accountant/update-fixed-cost</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ProductOrderList</servlet-name>
+        <url-pattern>/protected/prod_planner/prod-order-list</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>SearchProdOrder</servlet-name>
+        <url-pattern>/protected/prod_planner/search-prod-order</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>DeleteFixedCost</servlet-name>
+        <url-pattern>/protected/accountant/delete-fixed-cost</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>FixedCostManagement</servlet-name>
+        <url-pattern>/protected/accountant/fixed-cost-management</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>CustomerList</servlet-name>
+        <url-pattern>/protected/prod_planner/customer-list</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>SearchProcess</servlet-name>
+        <url-pattern>/protected/designer/search-process</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>UpdateCustomer</servlet-name>
+        <url-pattern>/protected/prod_planner/update-customer</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>MaterialOrdersList</servlet-name>
+        <url-pattern>/protected/prod_planner/material-orders-list</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>TimeDifferenceServlet</servlet-name>
+        <url-pattern>/protected/accountant/time-difference</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ReportManagementServlet</servlet-name>
+        <url-pattern>/protected/accountant/report-management</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>DownloadReportServlet</servlet-name>
+        <url-pattern>/protected/accountant/download-report</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>SearchMaterialOrder</servlet-name>
+        <url-pattern>/protected/prod_planner/search-material-order</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ChangeProductStatus</servlet-name>
+        <url-pattern>/protected/designer/change-product-status</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>WarehouseList</servlet-name>
+        <url-pattern>/protected/prod_planner/warehouse-list</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>SearchStoredMaterial</servlet-name>
+        <url-pattern>/protected/prod_planner/search-stored-materials</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AddMaterialOrder</servlet-name>
+        <url-pattern>/protected/prod_planner/add-material-order</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>SearchStoredItem</servlet-name>
+        <url-pattern>/protected/prod_planner/search-unsold-items</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>SearchCustomer</servlet-name>
+        <url-pattern>/protected/prod_planner/search-customer</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AddSupplyingMaterialOrder</servlet-name>
+        <url-pattern>/protected/prod_planner/add-supplying-material-order</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ChangeProcessEstimatedTime</servlet-name>
+        <url-pattern>/protected/designer/change-process-estimated-time</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>DeleteMaterialOrder</servlet-name>
+        <url-pattern>/protected/prod_planner/delete-material-order</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AddSupplier</servlet-name>
+        <url-pattern>/protected/prod_planner/add-supplier</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ShowInfo</servlet-name>
+        <url-pattern>/protected/prod_planner/show-related-info</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ControlProdOrder</servlet-name>
+        <url-pattern>/protected/prod_planner/control-order-in-prod</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ControlItem</servlet-name>
+        <url-pattern>/protected/prod_planner/control-items-in-prod</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ControlProdPhase</servlet-name>
+        <url-pattern>/protected/prod_planner/control-prod-phases</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ControlEmployee</servlet-name>
+        <url-pattern>/protected/prod_planner/control-employee</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>EmployeeList</servlet-name>
+        <url-pattern>/protected/prod_planner/employee-list</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>EmployeeManagement</servlet-name>
+        <url-pattern>/protected/administrator/employee-management</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AddEmployee</servlet-name>
+        <url-pattern>/protected/administrator/add-employee</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>UpdateEmployee</servlet-name>
+        <url-pattern>/protected/administrator/update-employee</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>DeleteEmployee</servlet-name>
+        <url-pattern>/protected/administrator/delete-employee</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>RestManager</servlet-name>
+        <url-pattern>/protected/administrator/rest/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>SupplierList</servlet-name>
+        <url-pattern>/protected/prod_planner/supplier-list</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>DeleteCustomer</servlet-name>
+        <url-pattern>/protected/prod_planner/delete-customer</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>UpdateSupplier</servlet-name>
+        <url-pattern>/protected/prod_planner/update-supplier</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>DeleteSupplier</servlet-name>
+        <url-pattern>/protected/prod_planner/delete-supplier</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>DeleteProdOrder</servlet-name>
+        <url-pattern>/protected/prod_planner/delete-prod-order</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ProductList</servlet-name>
+        <url-pattern>/protected/designer/product-list</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ProcessList</servlet-name>
+        <url-pattern>/protected/designer/process-list</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>RawMaterialList</servlet-name>
+        <url-pattern>/protected/designer/raw-material-list</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/protected/logout</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ViewOperationsWorker</servlet-name>
+        <url-pattern>/protected/lineprod_worker/view-operations</url-pattern>
+    </servlet-mapping>
+
+    <!-- Protecting resources-->
+    <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>it.unipd.dei.webapp.filter.LoginFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/protected/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>DesignerFilter</filter-name>
+        <filter-class>it.unipd.dei.webapp.filter.DesignerFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>DesignerFilter</filter-name>
+        <url-pattern>/protected/designer/*</url-pattern>
+        <url-pattern>/protected/jsp/designer/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>AccountantFilter</filter-name>
+        <filter-class>it.unipd.dei.webapp.filter.AccountantFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>AccountantFilter</filter-name>
+        <url-pattern>/protected/accountant/*</url-pattern>
+        <url-pattern>/protected/jsp/accountant/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>AdministratorFilter</filter-name>
+        <filter-class>it.unipd.dei.webapp.filter.AdministratorFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>AdministratorFilter</filter-name>
+        <url-pattern>/protected/administrator/*</url-pattern>
+        <url-pattern>/protected/jsp/administrator/*</url-pattern>
+        <url-pattern>/protected/js/administrator/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>LineProdFilter</filter-name>
+        <filter-class>it.unipd.dei.webapp.filter.LineProdFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>LineProdFilter</filter-name>
+        <url-pattern>/protected/lineprod_worker/*</url-pattern>
+        <url-pattern>/protected/jsp/lineprod_worker/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>ProdPlannerFilter</filter-name>
+        <filter-class>it.unipd.dei.webapp.filter.ProdPlannerFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>ProdPlannerFilter</filter-name>
+        <url-pattern>/protected/prod_planner/*</url-pattern>
+        <url-pattern>/protected/jsp/prod_planner/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>WarehouseWorkerFilter</filter-name>
+        <filter-class>it.unipd.dei.webapp.filter.WarehouseWorkerFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>WarehouseWorkerFilter</filter-name>
+        <url-pattern>/protected/warehouse_worker/*</url-pattern>
+        <url-pattern>/protected/jsp/warehouse_worker/*</url-pattern>
+    </filter-mapping>
+
+    <resource-ref>
+        <description>Connection pool to the database in readonly</description>
+        <res-ref-name>jdbc/readonly</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+
+
+    <resource-ref>
+        <description>Connection pool to the database in readwrite</description>
+        <res-ref-name>jdbc/readwrite</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+
+    <context-param>
+        <param-name>javax.faces.CONFIG_FILES</param-name>
+        <param-value>/WEB-INF/classes/faces-config.xml</param-value>
+    </context-param>
+
+</web-app>

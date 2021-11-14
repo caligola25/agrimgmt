@@ -1,0 +1,194 @@
+.table {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    background-color: transparent;
+    border: 1pt;
+    border-collapse: collapse;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    overflow-wrap: break-word;
+}
+
+#left-table {
+    margin-left: 2.5%;
+}
+
+.large-table{
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+thead {
+    border-bottom: 2pt solid #CFDDD9;
+    background-color: #6FA054;
+    font-size: 1.3em;
+}
+
+th, td {
+    border: 1pt solid #CFDDD9;
+    vertical-align: middle !important;/*make sure the text position doesn't get overwritten*/
+    text-align: center;
+    padding: 0.7em;
+}
+
+/*change background when table row hovered*/
+tbody>tr:hover {
+    background-color: rgba(66, 122, 161, 0.1);/*#427AA1 street blue*/
+}
+
+.button-container form {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+/*style buttons in the button container*/
+.button-container button,
+.button-container input[type="submit"]
+{
+    all:initial;/*resets all properties*/
+    display : inline;
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+/*style the icons in the buttons*/
+form>button>i {
+    margin-left : 0.25em;
+    margin-right : 0.25em;
+    font-family: sans-serif;
+    background-color: transparent;
+    border-radius: 0px;
+    box-shadow: none;
+    color: #272727;
+}
+
+.button-container button:hover {
+    background-color: transparent;
+    color: #272727;
+    box-shadow: none;
+}
+
+/*change icon size when hovered*/
+button:hover .update,
+button:hover .delete,
+button:hover .check,
+button:hover .chTime,
+button:hover .available,
+button:hover .unavailable
+{
+    transform: scale(1.1);
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    padding-right: 0.2em;
+    padding-left: 0.2em;
+}
+  
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 6em;
+    background-color: #272727;
+    color: #CFDDD9;
+    text-align: center;
+    padding: 0.2em;
+    border-radius: 6px;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -3em; /* Use half of the width, to center the tooltip */
+
+    /*for transition opacity*/
+    opacity: 0;
+    transition: opacity 0.3s;
+
+    /* Position tooltip text */
+    position: absolute;
+    z-index: 1;
+}
+  
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Tooltip bottom arrow */
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -0.25em;
+    border-width: 0.25em;
+    border-style: solid;
+    border-color: #272727 transparent transparent transparent;
+}
+
+@media screen and (max-width: 1024px) {
+    th,td {
+        padding: 0.5em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    th,td {
+        padding: 0.2em;
+    }
+
+    .button-container form{
+        display: block;
+    }
+    
+    .button-container button {
+        padding: 0.2em;
+    }
+    
+    form>button>i {
+        margin: 0;
+    }
+
+    /* Move tooltips to the left side */
+    .tooltip .tooltiptext {
+        bottom: initial;
+        left: initial;
+        margin-left: initial;
+        top: -0.25em;
+        right: 120%;
+    }
+
+    /* special rule for longer tooltip */
+    .tooltip .check+.tooltiptext{
+        top: -1em;
+    }
+
+    /* Move tooltip arrow to the right side */
+    .tooltip .tooltiptext::after {
+        content: " ";
+        position: absolute;
+        top: 50%;
+        left: 100%; /* To the right of the tooltip */
+        margin-top: -0.5em;
+        border-width: 0.5em;
+        border-style: solid;
+        border-color: transparent transparent transparent #272727;
+    }
+}
+@media screen and (max-width: 480px) {
+    th,td {
+        padding: 0;
+    }
+}

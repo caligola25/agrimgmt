@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<Context>
+
+   <Resource name="jdbc/readonly"
+          auth="Container"
+          type="javax.sql.DataSource"
+          factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+          driverClassName="org.postgresql.Driver"
+          url="jdbc:postgresql://localhost:5432/agrimgmt"
+          username="readonly"
+          password="agrm_r"
+          testOnBorrow="true"
+          validationQuery="SELECT 1"
+          timeBetweenEvictionRunsMillis="30000"
+          maxActive="10"
+          minIdle="5"
+          maxWait="10000"
+          initialSize="2"
+          removeAbandonedTimeout="60"
+          removeAbandoned="true"
+          closeMethod="close"
+	/>
+    <Resource name="jdbc/readwrite"
+              auth="Container"
+              type="javax.sql.DataSource"
+              factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+              driverClassName="org.postgresql.Driver"
+              url="jdbc:postgresql://localhost:5432/agrimgmt"
+              username="readwrite"
+              password="agrm_rw"
+              testOnBorrow="true"
+              validationQuery="SELECT 1"
+              timeBetweenEvictionRunsMillis="30000"
+              maxActive="10"
+              minIdle="5"
+              maxWait="10000"
+              initialSize="2"
+              removeAbandonedTimeout="60"
+              removeAbandoned="true"
+              closeMethod="close"
+    />
+
+</Context>
